@@ -1,38 +1,15 @@
-import sys
 
-input=sys.stdin.readline
-n= int(input())
-a=[]
-n2 = 0
-
-while True : 
-    if n2 == n :
+n = int(input())
+n1 = 0
+while True :
+    if n1 == n :
         break
-    cmd = input().split()
-
-    if cmd[0] == "push":
-        a.append(cmd[1])
-    elif cmd[0] == "pop" : 
-        if len(a) != 0:
-            print(a[len(a)-1])
-            del a[len(a)-1]
-        else:
-            print("-1")
-    elif cmd[0] == "size" :
-        print(len(a))
     
-    elif cmd[0] == "empty" : 
-        if len(a)  == 0:
-            print("1")
-        else:
-            print("0")
-    elif cmd[0] == "top" :
-        if len(a) != 0 :
-            print(a[len(a)-1])
-        else:
-            print("-1")        
-          
+    n2 = input().split()
+    for i in range(0,len(n2)):
+        n2[i] = n2[i][::-1]
+    result =" ".join(n2)
+    print(result)
 
-    n2=n2+1   
-
-
+    n1 =n1+1
+     
