@@ -55,4 +55,4 @@ stack = []
 
 for i in word : 
         if i.isalnum() : 
-                stack.append(num[])
+                stack.append(num[i])
