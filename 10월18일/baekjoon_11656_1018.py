@@ -12,4 +12,4 @@ for i in range(len(n)) :
 
 result.sort()
 for i in range(len(result)) : 
-    print(result[i])
+    print(result[i]) 
