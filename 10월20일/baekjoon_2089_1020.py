@@ -1,43 +1,10 @@
-"""m = 0
-n = 0
-x = int(input())
-result = []
-final = ""
-
-if x == 1 : 
-    print("1")
-
-else:
-    while True :
-        if x == 1 :
-            result.append(1)
-            break
-         
-        m = x//-2
-        n = x%-2
-        x = m
-        
-    
-
-        if n ==-1 : 
-            n =1
-            x += 1
-            result.append(n)
-
-        elif n ==1 or n == 0 : 
-            result.append(n)
-
-        
-
-   
-    for i in result[::-1] : 
-        final +=str(i)
-
-
-    print(final)
-   """
-
 #모르는 개념이였음 아직도 천천히 하지 않으면 헷갈림..
+#-2진법개념
+#-2로 나누니깐 나머지는 -1 or 0 뿐임
+#나머지가 -1 이여도 true 값임
+#나머지가 -1 이면 reuslt 문자배열에 1을 추가하고 몫에다가 +1을 해야함
+#그후 0 이 나올떄까지 이 걸 반복한후
+#result값을 거꾸로 출력하면됨 여기서는 result값을 뒤에다가 추가하는 형식으로 만들었음
 
 n = int(input())
 res =''
