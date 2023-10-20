@@ -1,13 +1,3 @@
-"""import sys
-
-num = 1000001
-arr = [True for _ in range(num)]
-for i in range(2, int((num-1)**0.5)+1):
-    if arr[i]:
-        for k in range(i*2, num, i):
-            arr[k] = False
-"""
-
 import sys
 num = 1000001
 stack = [True]*num
