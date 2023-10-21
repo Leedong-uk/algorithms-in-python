@@ -38,3 +38,6 @@ for s in string:
 while word_stack:
     res += word_stack.pop()
 print(res)
+
+
+
