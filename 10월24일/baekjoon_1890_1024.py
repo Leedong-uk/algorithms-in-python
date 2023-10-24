@@ -8,7 +8,7 @@ dp[0][0] = 1
 for i in range(N) : 
     for j in range(N) : 
         if dp[i][j] >0 and arr[i][j] >0 : 
-            jump = arr[i][j]
+            jump = arr[i][j] 
             #우측점프
             if j+jump < N : 
                 dp[i][j+jump] +=dp[i][j]
