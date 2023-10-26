@@ -6,7 +6,8 @@
 
 
 N = int(input())
-lst = [0]+list(map(int, input().split()))
+for i in range(N) : 
+    a = [0]+list(map(int,input().split()))
 
 
 dp = [0]*(N+1)
