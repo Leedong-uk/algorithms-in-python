@@ -5,46 +5,35 @@
 
 n = int(input())
 m = int(input())
-broken = [False]*10
-
-#check method 초기화
-def check(x) : 
-    count = 0
-    for i in x : 
-        
-        if broken[int(i)] : 
-            return 0
-        
-        else: 
-            count+=1
-
-    return count        
-        
-
+broken = [False] * 10
 if m > 0:
     a = list(map(int,input().split()))
-    #부숴진 버튼 체크
-    for i in a : 
-        broken[i] = True
-
-    ans = abs(n-100)        
-
-
-    for i in range(1000001) : 
-        c = str(i)
-        k = check(c)
-        if k > 0 :
-            press = abs(n-i)
-            if ans > k + press:
-                ans = len(c)+press
-
-    print(ans)    
-
-elif  m == 0 :
-    if n == 100:
-        print(0)
-    else : 
-        print(len(str(n)))
+else:
+    a = []
+for x in a:
+    broken[x] = True
+def possible(c):
+    if c == 0:
+        if broken[0]:
+            return 0
+        else:
+            return 1
+    l = 0
+    while c > 0:
+        if broken[c%10]:
+            return 0
+        l += 1
+        c //= 10
+    return l
+ans = abs(n-100)
+for i in range(0, 1000000+1):
+    c = i
+    l = possible(c)
+    if l > 0:
+        press = abs(c-n)
+        if ans > l + press:
+            ans = l + press
+print(ans)
 
 
 
