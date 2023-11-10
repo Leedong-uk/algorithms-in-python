@@ -1,6 +1,7 @@
+#내일 다시 시도 해 보자!
 k = int(input())
 moon = list(map(str,input().split()))
-s = []
+s = ""
 tmp = []
 
 def go (index,n,s) : 
@@ -14,9 +15,9 @@ def go (index,n,s) :
         
         return
     
-
-    go(index+1,n+1,s+[str(index)])
-    go(index+1,n,s)
+    for _ in range(1,10):
+        go(index+1,n+1,s+str(index))
+        go(index+1,n,s)
 
 
 go(1,0,s)
