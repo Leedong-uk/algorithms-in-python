@@ -20,8 +20,7 @@ def bfs (x,y,cnt) :
 
 
 while True : 
-    print("-----------------------")
-    print("새로운 입력 start!!")
+   
     m , n = map(int,input().split())
     if m == 0 and n == 0 :
         break
@@ -37,4 +36,4 @@ while True :
                 bfs(i,j,cnt)
     
    
-    print("출력 : %d"%cnt)
+    print(cnt)
