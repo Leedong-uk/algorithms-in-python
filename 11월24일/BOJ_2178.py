@@ -23,5 +23,5 @@ def bfs (x,y) :
 
 
 bfs(0,0)
-print(group[n-1][m-1])
+print(group)
     
