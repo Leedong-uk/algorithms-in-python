@@ -17,6 +17,8 @@ for i in range(n):
 
 for i in range(n):
     a[i].sort(key=lambda x: order[x])
+    #order의 원소순서대로 정렬을시킨다
+    #그래서 이 오더 순서대로 dfs 알고리즘을 시행했을떄 성공한다면 이 접근방식은 맞게 되는것
 
 dfs_order = []
 check = [False]*n
