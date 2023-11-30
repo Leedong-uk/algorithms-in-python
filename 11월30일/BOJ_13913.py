@@ -1,5 +1,7 @@
 from collections import deque
+import sys
 MAX = 200000
+sys.setrecursionlimit(MAX)
 start , end = map(int,input().split())
 check = [False] *(MAX+1)
 dist = [-1]*(MAX+1)
