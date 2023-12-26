@@ -23,7 +23,7 @@ while q :
     if x == t : 
         if len(s) == 0 : 
             s = '0'
-        print(s)
+        print(s)  
         exit()
     
     if 0 <= x*x <= limit and x*x not in check:
@@ -37,7 +37,7 @@ while q :
     if 0 <= x-x <= limit and x-x not in check:
         q.append((x-x,s+'-'))
         check.add(x-x)
-        
+
     if x != 0 and 0 <= x//x <= limit and x//x not in check:
         q.append((x//x,s+'/'))
         check.add(x//x)
