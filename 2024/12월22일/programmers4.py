@@ -39,7 +39,3 @@ print(start)
 
 
 
-
-
-["OXXO", "XSXO", "XXXX"], ["E 1", "S 1"]
- [1, 1]
