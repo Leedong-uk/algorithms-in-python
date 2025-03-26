@@ -25,3 +25,7 @@ for i in check :
             result[index] +=1
     index+=1
 print(result)
+
+
+#할일 1. heap 정리
+#     2. fraction 정리 
