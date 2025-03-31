@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+
+.container {
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 71.25rem;
+  width: 100%;
+}
+
+.nav {
+  padding-block: 1rem;
+}
+
+.nav__title {
+  color: rgb(253, 191, 191);
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
