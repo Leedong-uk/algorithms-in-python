@@ -17,7 +17,6 @@ while True :
                 cnt +=1
                 q.append((i,j))
                 group[i][j] = cnt
-                
                 while q : 
                     x ,y  = q.popleft()
                     for k in range(8) :
