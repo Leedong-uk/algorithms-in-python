@@ -1,34 +1,27 @@
-from collections import defaultdict
-
 def solution(info, edges):
-    graph = defaultdict(list)
-    for parent, child in edges:
-        graph[parent].append(child)
+    visited = [False] * len(info)
+    visited[0] = True  # ✅ 0번 노드를 방문한 상태로 시작
 
-    max_sheep = 0
+    def dfs(sheep, wolf):
+        # ✅ 만약 늑대가 양보다 크거나 같으면 빠져나온다.
+        if sheep == wolf:
+            return sheep
 
-    def dfs(curr, sheep, wolf, next_nodes):
-        nonlocal max_sheep
+        max_sheep = sheep
 
-        if info[curr] == 0:
-            sheep += 1
-        else:
-            wolf += 1
+        # ✅ 모든 edge를 확인
+        for parent, child in edges:
+            # ✅ 부모가 방문된 상태이고 자식이 아직 방문되지 않았다면
+            if visited[parent] and not visited[child]:
+                visited[child] = True  # 방문 처리
 
-        if wolf >= sheep:
-            return
+                if info[child] == 0:  # 양
+                    max_sheep = max(max_sheep, dfs(sheep + 1, wolf))
+                else:  # 늑대
+                    max_sheep = max(max_sheep, dfs(sheep, wolf + 1))
 
-        max_sheep = max(max_sheep, sheep)
+                visited[child] = False  # 방문 해제 (백트래킹)
 
-        # 현재 노드에서 이동 가능한 노드 갱신
-        #현재 curr 에서 갈수 있는 모든거 ()= graph[curr])를 다음 방문지 next_node 에 추가
-        new_next = next_nodes + graph[curr]
-        # 현재 노드를 방문했으므로 제외
-        if curr in new_next:
-            new_next.remove(curr)
+        return max_sheep
 
-        for i in range(len(new_next)):
-            dfs(new_next[i], sheep, wolf, new_next[:i] + new_next[i+1:])
-
-    dfs(0, 0, 0, [])
-    return max_sheep
+    return dfs(1, 0)
