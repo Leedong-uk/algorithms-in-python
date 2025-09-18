@@ -22,7 +22,6 @@ def solution(n,vertex) :
             if visited[i] == -1 : 
                 visited[i] = visited[x] +1
                 q.append(i)
-    print(visited)
     max_distance = max(visited)
     answer = visited.count(max_distance)
     
