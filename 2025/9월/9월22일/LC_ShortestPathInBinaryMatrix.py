@@ -7,6 +7,9 @@ def shortestPathBinaryMatrix(grid) :
     m = len(grid[0])
     visited = [[-1]*m for _ in range(n)]
 
+    if grid[0][0] == 1 : 
+        return -1
+
     q.append((0,0))
     visited[0][0] = 0
 
